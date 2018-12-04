@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+}
+
+.levelsText {
+    font-size: 30px;
+    margin-left: -300px;
+    margin-top: 30px;
+    color: blueviolet;
+}
+
+.lives {
+    display: inline-block;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 65px;
+    margin-left: -50px;
+    color: brown;
+
+}
+
+.img1,
+.img2,
+.img3 {
+    width: 70px;
+}
+
+.mainContainer {
+    margin-top: -130px;
+}
+
+.imgContainer {
+    position: absolute;
+    margin-left: 720px;
+
+}
+
+canvas {
+    margin-top: 70px;
+}
