@@ -6,9 +6,9 @@ const babel = require('gulp-babel')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
-gulp.task('default', ['css', 'images', 'js'], function(){
+gulp.task('default', ['css', 'images', 'js', 'copy-html'], function(){
     gulp.watch('./src/css/**/*.css', ['css']);
-    // gulp.watch('/index.html', ['copy-html']);
+    gulp.watch('/index.html', ['copy-html']);
 });
 
 gulp.task('css', function(){
@@ -18,10 +18,10 @@ gulp.task('css', function(){
         .pipe(gulp.dest('./dist/css'))
 });
 
-// gulp.task('copy-html', function(){
-//     gulp.src('./index.html')
-//         .pipe(gulp.dest('./dist'));
-// })
+gulp.task('copy-html', function(){
+    gulp.src('./index.html')
+        .pipe(gulp.dest('./dist'));
+})
 
 gulp.task('images', function(){
     return gulp.src('./src/images/**/*.png')
