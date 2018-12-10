@@ -8,6 +8,7 @@ const uglify = require('gulp-uglify')
 
 gulp.task('default', ['css', 'images', 'js', 'copy-html'], function(){
     gulp.watch('./src/css/**/*.css', ['css']);
+    gulp.watch('./src/js/**/*.js', ['js']);
     gulp.watch('/index.html', ['copy-html']);
 });
 
